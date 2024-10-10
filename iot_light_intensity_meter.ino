@@ -252,22 +252,22 @@ const char index_html[] PROGMEM = R"rawliteral(
       yAxis: { title: { text: 'Intensity (Lux)' } },
       credits: { enabled: false }
       });
-      setInterval(function ( ) {
-      var xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          var x = (new Date()).getTime(),
-              y = parseFloat(this.responseText);
-          if(chartT.series[0].data.length > 40) {
-            chartT.series[0].addPoint([x, y], true, true, true);
-          } else {
-            chartT.series[0].addPoint([x, y], true, false, true);
-          }
-        }
-      };
-      xhttp.open("GET", "/light", true);
-      xhttp.send();
-      }, 5000 );
+      // setInterval(function ( ) {
+      // var xhttp = new XMLHttpRequest();
+      // xhttp.onreadystatechange = function() {
+      //   if (this.readyState == 4 && this.status == 200) {
+      //     var x = (new Date()).getTime(),
+      //         y = parseFloat(this.responseText);
+      //     if(chartT.series[0].data.length > 40) {
+      //       chartT.series[0].addPoint([x, y], true, true, true);
+      //     } else {
+      //       chartT.series[0].addPoint([x, y], true, false, true);
+      //     }
+      //   }
+      // };
+      // xhttp.open("GET", "/light", true);
+      // xhttp.send();
+      // }, 5000 );
   })();
 </script>
 </html>

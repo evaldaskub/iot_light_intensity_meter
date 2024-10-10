@@ -9,9 +9,9 @@ Quick & Dirty Light intensity sensor based on ESP32 with a local webserver, data
 4. Use serial monitor to ensure succesful start of ESP & note down IP address for web GUI
 
 ## Web Endpoints
-- <ip> : Chart of historical data stored every 10 minutes (default) + Live display of information logged every 5s (default)
+- <ip> : Chart of historical measurements
 - <ip>/history : raw data stored on the microcontroller
-- <ip>/history.json : json data stored on the microcontroller
+- <ip>/history.json : json formatted data stored on the microcontroller
 - <ip>/destroy_history : delete stored data file (reboot uC after file deletion, to reinitialize neccessary data)
 
 # Hardware Setup
